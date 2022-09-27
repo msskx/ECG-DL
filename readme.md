@@ -8,6 +8,16 @@
   wget -r -N -c -np https://physionet.org/files/ptb-xl/1.0.2/
   ```
 - this project process with file :
-```  
-./Data/dataset.py
-```
+  ```  
+  ./Data/Dataloader.py
+  ```
+- we provide four kinds of dataset 
+  ```
+  shape(None,12,1000)
+  
+  shape(None,1000,12)
+  
+  shape(None,12,1000,1)
+  
+  shape(None,1000,12,1)
+  ```

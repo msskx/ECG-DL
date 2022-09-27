@@ -11,7 +11,7 @@ def load_raw_data(df, sampling_rate, path):
     data = np.array([signal for signal, meta in data])
     return data
 
-path = 'ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2/'
+path = './'
 sampling_rate=100
 
 # load and convert annotation data
