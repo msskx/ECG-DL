@@ -5,7 +5,7 @@ import numpy as np
 
 
 def model_evaluate(X_test, y_test, model):
-    actual = y_test.argmax(axis=1)  # 真实的类别标签（将one-hot)标签逆向
+    actual = np.array(y_test).argmax(axis=1)  # 真实的类别标签（将one-hot)标签逆向
     predict_x = model.predict(X_test)  # 预测标签
     predicted = np.argmax(np.array(predict_x), axis=1)  # one-hot编码逆向
 

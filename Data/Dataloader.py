@@ -6,6 +6,7 @@ import ast
 
 class OriginalData:
     def __init__(self):
+        print("================loading data================")
         self.path = './Data/'
         self.sampling_rate = 100
         # load and convert annotation data

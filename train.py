@@ -19,6 +19,6 @@ model = CNN.cnn(input_shape)
 print(model.summary())
 
 callbacks = [keras.callbacks.EarlyStopping(patience=10, restore_best_weights=True)]
-model.fit(X_train, y_train, batch_size=batch_size, epochs=2, validation_split=0.1, callbacks=callbacks)
+model.fit(X_train, y_train, batch_size=batch_size, epochs=1000, validation_split=0.1, callbacks=callbacks)
 
 model_evaluate(X_test, y_test, model)
