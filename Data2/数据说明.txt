@@ -1,0 +1,22 @@
+1. 数据目录
+   DATA
+   |- trainreference.csv TRAIN目录下数据的LABEL
+   |- TRAIN				 训练用的数据
+	 |- VAL				 测试数据
+
+
+2.数据格式
+  12导联的数据，保存matlab格式文件中。数据格式是(12, 5000)。
+  采样500HZ，10S长度有效数据。具体读取方式参考下面代码。
+  0..12是I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5和V6数据。单位是mV。
+
+	import scipy.io as sio
+	ecgdata = sio.loadmat("TEST0001.MAT")['ecgdata']
+
+3. trainreference.csv格式
+   每行一个文件。 格式：文件名,LABEL (0正常心电图，1异常心电图）
+
+4. 选手训练后模型后，对VAL中的数据进行预测，按照如下格式生成answer.csv,提交给大赛方评价。
+
+   name,tag
+   VAL0001,1
